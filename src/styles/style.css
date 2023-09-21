@@ -1,0 +1,52 @@
+/* costum properties */
+
+:root{
+    --background-color:#0C0C0C;
+    --surface-color:#1D1D1D;
+    --card-color:#181818;
+    --text-primary:#fff;
+    --text-secondary:#9b9b9b;
+}
+
+@font-face {
+    font-family:GothamMedium;
+    src: url(GothamMedium.ttf);
+}
+@font-face {
+    font-family:Gotham-Thin;
+    src: url(Gotham-Thin.ttf);
+}
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: var(--surface-color);
+    font-family:GothamMedium ;
+}
+.body{
+    display: flex;
+    height: 100%;
+}
+
+main{
+    background-color: var(--surface-color);
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+img{
+    width: 100%;
+}
+a {
+    text-decoration: none;
+  }
+
+li{
+    list-style-type: none;
+}
+
+header{
+    background-color:var(--background-color);
+}
