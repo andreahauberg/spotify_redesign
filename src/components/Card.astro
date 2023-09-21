@@ -1,0 +1,35 @@
+---
+const { header, imageSrc } = Astro.props;
+---
+
+<div class="card">
+  <img src={imageSrc} alt="Card Image" />
+  <h1>{header}</h1>
+  <p>Some description or additional information about the card.</p>
+</div>
+
+<style>
+  .card {
+    border-radius: 8px;
+    padding: 16px;
+    max-width: 150px;
+    background-color: var(--card-color);
+    margin-left: 1em;
+    margin-bottom: 1em;
+  }
+
+  .card h1 {
+    font-size: 0.7rem;
+    margin: 8px 0;
+    color: var(--text-primary);
+  }
+
+  .card p {
+    font-size: 10px;
+    line-height: 1rem;
+    font-weight: lighter;
+    color: var(--text-secondary);
+    font-family: Gotham-Thin;
+    font-weight: bold;
+  }
+</style>
