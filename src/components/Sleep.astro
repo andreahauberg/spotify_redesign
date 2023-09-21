@@ -1,0 +1,22 @@
+---
+import Card from '../components/Card.astro'
+---
+
+<h1>Sleep</h1>
+<section>
+    <Card header = "Sleep" imageSrc="../sleep.png"/>
+    <Card header = "DayDreamer" imageSrc="../dreamer.png"/>
+</section>
+
+<style>
+    section{
+        display:flex;
+        flex-wrap:wrap;
+    }
+
+    h1{
+        color:var(--text-primary);
+        padding:1rem;
+        font-size:1.5rem;
+    }
+</style>

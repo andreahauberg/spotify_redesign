@@ -1,0 +1,25 @@
+---
+import Card from '../components/Card.astro'
+---
+
+<h1>Focus</h1>
+<section>
+    <Card header = "Peacefull Piano" imageSrc="../piano.png"/>
+    <Card header = "Deep Focus" imageSrc="../deep.png"/>
+    <Card header = "Instrumental Study" imageSrc="../study.png"/>
+    <Card header = "Jazz Vibes" imageSrc="../jazz.png"/>
+    <Card header = "Focus Flow" imageSrc="../flow.png"/>
+</section>
+
+<style>
+    section{
+        display:flex;
+        flex-wrap:wrap;
+    }
+
+    h1{
+        color:var(--text-primary);
+        padding:1rem;
+        font-size:1.5rem;
+    }
+</style>
