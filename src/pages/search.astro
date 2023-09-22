@@ -7,6 +7,7 @@ import CategoryCard from "../components/CategoryCard.astro";
 
 <MainLayout title="Search">
   <input type="text" placeholder="What do you want to listen to?" />
+  <h1>Browse All</h1>
   <section class="search">
     <CategoryCard
       isNew={isNewCategory}
@@ -75,7 +76,7 @@ import CategoryCard from "../components/CategoryCard.astro";
   }
 
   .search {
-    margin-top: 15vh;
+    /* margin-top: 15vh; */
     margin-bottom: 15vh;
   }
   input[type="text"] {
@@ -101,5 +102,11 @@ import CategoryCard from "../components/CategoryCard.astro";
   }
   input:focus {
     outline: none;
+  }
+
+  h1 {
+    margin-top: 15vh;
+    margin-left: 40vh;
+    color: var(--text-primary);
   }
 </style>
