@@ -6,6 +6,7 @@
     --card-color:#181818;
     --text-primary:#fff;
     --text-secondary:#9b9b9b;
+    --footer-gradient: linear-gradient(90deg, #af2896, #509bf5);
 }
 
 @font-face {

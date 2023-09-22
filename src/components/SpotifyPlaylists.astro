@@ -1,25 +1,37 @@
 ---
-import Card from '../components/Card.astro'
+import Card from "../components/Card.astro";
 ---
 
 <h1>Spotify Playlists</h1>
 <section>
-    <Card header = "Today's Top Hits" imageSrc="../top.png"/>
-    <Card header = "RapCaviar" imageSrc="../caviar.png"/>
-    <Card header = "All Out 2010s" imageSrc="../all.png"/>
-    <Card header = "Rock Classics" imageSrc="../rock.png"/>
-    <Card header = "Chill Hits" imageSrc="../chill.png"/>
+  <Card header="Today's Top Hits" imageSrc="../top.png" />
+  <Card header="RapCaviar" imageSrc="../caviar.png" />
+  <Card header="All Out 2010s" imageSrc="../all.png" />
+  <Card header="Rock Classics" imageSrc="../rock.png" />
+  <Card header="Chill Hits" imageSrc="../chill.png" />
 </section>
 
 <style>
-    section{
-        display:flex;
-        flex-wrap:wrap;
+  section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media (max-width: 1200px) {
+    section {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      overflow-y: hidden;
+      white-space: nowrap;
     }
 
-    h1{
-        color:var(--text-primary);
-        padding:1rem;
-        font-size:1.5rem;
+    section > * {
+      flex: 0 0 auto;
     }
+  }
+
+  h1 {
+    color: var(--text-primary);
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
 </style>
