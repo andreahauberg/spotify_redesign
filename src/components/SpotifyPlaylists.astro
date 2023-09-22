@@ -2,7 +2,11 @@
 import Card from "../components/Card.astro";
 ---
 
-<h1>Spotify Playlists</h1>
+<div class="play">
+  <h1>Spotify Playlists</h1>
+  <h2>Show All</h2>
+</div>
+
 <section>
   <Card header="Today's Top Hits" imageSrc="../top.png" />
   <Card header="RapCaviar" imageSrc="../caviar.png" />
@@ -14,24 +18,31 @@ import Card from "../components/Card.astro";
 <style>
   section {
     display: flex;
-    flex-wrap: wrap;
-  }
-  @media (max-width: 1200px) {
-    section {
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      overflow-y: hidden;
-      white-space: nowrap;
-    }
-
-    section > * {
-      flex: 0 0 auto;
-    }
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    margin-left: 250px;
+    overflow: hidden;
   }
 
   h1 {
     color: var(--text-primary);
     padding: 1rem;
     font-size: 1.5rem;
+    margin-left: 250px;
+  }
+  h2 {
+    margin-top: 2em;
+    color: var(--text-secondary);
+    padding: 1rem;
+    font-size: 0.8rem;
+    font-weight: lighter;
+  }
+  h2:hover {
+    color: var(--text-primary);
+  }
+
+  .play {
+    display: flex;
+    justify-content: space-between;
   }
 </style>

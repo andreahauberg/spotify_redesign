@@ -26,14 +26,10 @@ body{
     background-color: var(--surface-color);
     font-family:GothamMedium ;
 }
-.body{
-    display: flex;
-    height: 100%;
-}
-
 main{
     background-color: var(--surface-color);
-    margin-top: 5px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     margin-right: 5px;
 }
 

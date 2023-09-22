@@ -1,0 +1,55 @@
+---
+import Button from "./Button.astro";
+---
+
+<header class="top">
+  <menu>
+    <li>
+      <button class="arrow_btn">
+        <svg height="16" width="16" viewBox="0 0 16 16" fill="currentColor"
+          ><path
+            d="M11.03.47a.75.75 0 0 1 0 1.06L4.56 8l6.47 6.47a.75.75 0 1 1-1.06 1.06L2.44 8 9.97.47a.75.75 0 0 1 1.06 0z"
+          ></path></svg
+        >
+      </button>
+    </li>
+    <li>
+      <button class="arrow_btn">
+        <svg height="16" width="16" viewBox="0 0 16 16" fill="currentColor"
+          ><path
+            d="M4.97.47a.75.75 0 0 0 0 1.06L11.44 8l-6.47 6.47a.75.75 0 1 0 1.06 1.06L13.56 8 6.03.47a.75.75 0 0 0-1.06 0z"
+          ></path></svg
+        >
+      </button>
+    </li>
+  </menu>
+  <div class="button_combo">
+    <Button variant="secondary" size="large">Sign Up</Button>
+    <Button variant="primary" size="large">Login</Button>
+  </div>
+</header>
+
+<style>
+  .top {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--background-color);
+    color: var(--text-primary);
+    padding: 1rem;
+    height: 5rem;
+  }
+  menu {
+    display: flex;
+    gap: 1rem;
+  }
+  .arrow_btn {
+    background-color: transparent;
+    border-style: none;
+    color: var(--text-secondary);
+    margin-left:;
+  }
+</style>

@@ -1,36 +1,10 @@
 ---
 import Card from "../components/Card.astro";
-import Button from "../components/Button.astro";
 ---
 
-<div class="button_combo">
-  <div class="arrow">
-    <li>
-      <button class="arrow_btn">
-        <svg height="16" width="16" viewBox="0 0 16 16" fill="currentColor"
-          ><path
-            d="M11.03.47a.75.75 0 0 1 0 1.06L4.56 8l6.47 6.47a.75.75 0 1 1-1.06 1.06L2.44 8 9.97.47a.75.75 0 0 1 1.06 0z"
-          ></path></svg
-        >
-      </button>
-    </li>
-    <li>
-      <button class="arrow_btn">
-        <svg height="16" width="16" viewBox="0 0 16 16" fill="currentColor"
-          ><path
-            d="M4.97.47a.75.75 0 0 0 0 1.06L11.44 8l-6.47 6.47a.75.75 0 1 0 1.06 1.06L13.56 8 6.03.47a.75.75 0 0 0-1.06 0z"
-          ></path></svg
-        >
-      </button>
-    </li>
-  </div>
-  <div class="primary_btn">
-    <Button variant="secondary" size="large">Sign Up</Button>
-    <Button variant="primary" size="large">Login</Button>
-  </div>
-</div>
 <div class="focus">
   <h1>Focus</h1>
+  <h2>Show All</h2>
 </div>
 <section>
   <Card header="Peacefull Piano" imageSrc="../piano.png" />
@@ -43,37 +17,31 @@ import Button from "../components/Button.astro";
 <style>
   section {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-left: 250px;
   }
 
-  .button_combo {
-    background-color: var(--background-color);
-    display: flex;
-    justify-content: space-between;
-    margin-top: -10px;
-  }
-  .arrow {
-    display: flex;
-    gap: 1rem;
-  }
-
-  .primary_btn {
-    padding: 1rem;
-  }
-
-  .arrow_btn {
-    background-color: transparent;
-    border-style: none;
-    color: var(--text-secondary);
-    padding-top: 2rem;
-    padding-left: 2rem;
-  }
   h1 {
+    margin-left: 250px;
+    margin-top: 3.2em;
     color: var(--text-primary);
     padding: 1rem;
     font-size: 1.5rem;
   }
 
+  h2 {
+    margin-top: 6em;
+    color: var(--text-secondary);
+    padding: 1rem;
+    font-size: 0.8rem;
+    font-weight: lighter;
+  }
+
+  h2:hover {
+    color: var(--text-primary);
+  }
   .focus {
     display: flex;
     justify-content: space-between;

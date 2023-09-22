@@ -1,6 +1,7 @@
 ---
 import "../styles/style.css";
-import Header from "../components/Header.astro";
+import Nav from "../components/Nav.astro";
+import Top from "../components/Top.astro";
 import Focus from "../components/Focus.astro";
 import SpotifyPlaylists from "../components/SpotifyPlaylists.astro";
 import Sleep from "../components/Sleep.astro";
@@ -17,8 +18,9 @@ import Footer from "../components/Footer.astro";
     <title>Spotify Home</title>
   </head>
   <body>
-    <div class="body">
-      <Header />
+    <Top />
+    <div class="container">
+      <Nav />
       <main>
         <Focus />
         <SpotifyPlaylists />
@@ -28,3 +30,35 @@ import Footer from "../components/Footer.astro";
     <Footer />
   </body>
 </html>
+
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    /* height: 100vh; */
+  }
+
+  .container {
+    display: flex;
+    flex: 1;
+  }
+  Top,
+  Nav,
+  Footer {
+    flex-shrink: 0;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    background: var(--surface-color);
+    overflow-y: auto;
+    flex: 1;
+  }
+  Top,
+  Nav,
+  main,
+  Footer {
+    margin: 20px 0;
+  }
+</style>

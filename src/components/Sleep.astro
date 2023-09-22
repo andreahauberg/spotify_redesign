@@ -1,22 +1,45 @@
 ---
-import Card from '../components/Card.astro'
+import Card from "../components/Card.astro";
 ---
 
-<h1>Sleep</h1>
+<div class="sleep">
+  <h1>Sleep</h1>
+  <h2>Show All</h2>
+</div>
 <section>
-    <Card header = "Sleep" imageSrc="../sleep.png"/>
-    <Card header = "DayDreamer" imageSrc="../dreamer.png"/>
+  <Card header="Sleep" imageSrc="../sleep.png" />
+  <Card header="DayDreamer" imageSrc="../dreamer.png" />
 </section>
 
 <style>
-    section{
-        display:flex;
-        flex-wrap:wrap;
-    }
+  section {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-left: 250px;
+    padding-bottom: 5rem;
+  }
 
-    h1{
-        color:var(--text-primary);
-        padding:1rem;
-        font-size:1.5rem;
-    }
+  h1 {
+    color: var(--text-primary);
+    padding: 1rem;
+    font-size: 1.5rem;
+    margin-left: 250px;
+  }
+  h2 {
+    margin-top: 2em;
+    color: var(--text-secondary);
+    padding: 1rem;
+    font-size: 0.8rem;
+    font-weight: lighter;
+  }
+  h2:hover {
+    color: var(--text-primary);
+  }
+
+  .sleep {
+    display: flex;
+    justify-content: space-between;
+  }
 </style>
