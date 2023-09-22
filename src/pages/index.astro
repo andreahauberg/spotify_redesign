@@ -1,64 +1,12 @@
 ---
-import "../styles/style.css";
-import Nav from "../components/Nav.astro";
-import Top from "../components/Top.astro";
+import MainLayout from "../layouts/MainLayout.astro";
 import Focus from "../components/Focus.astro";
 import SpotifyPlaylists from "../components/SpotifyPlaylists.astro";
 import Sleep from "../components/Sleep.astro";
-import Footer from "../components/Footer.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <meta charset="utf-8" />
-    <title>Spotify Home</title>
-  </head>
-  <body>
-    <Top />
-    <div class="container">
-      <Nav />
-      <main>
-        <Focus />
-        <SpotifyPlaylists />
-        <Sleep />
-      </main>
-    </div>
-    <Footer />
-  </body>
-</html>
-
-<style>
-  body {
-    display: flex;
-    flex-direction: column;
-    /* height: 100vh; */
-  }
-
-  .container {
-    display: flex;
-    flex: 1;
-  }
-  Top,
-  Nav,
-  Footer {
-    flex-shrink: 0;
-  }
-
-  main {
-    display: flex;
-    flex-direction: column;
-    background: var(--surface-color);
-    overflow-y: auto;
-    flex: 1;
-  }
-  Top,
-  Nav,
-  main,
-  Footer {
-    margin: 20px 0;
-  }
-</style>
+<MainLayout title="Spotify Home">
+  <Focus />
+  <SpotifyPlaylists />
+  <Sleep />
+</MainLayout>

@@ -1,0 +1,105 @@
+---
+const { hasSearch } = Astro.props;
+const isNewCategory = true;
+import MainLayout from "../layouts/MainLayout.astro";
+import CategoryCard from "../components/CategoryCard.astro";
+---
+
+<MainLayout title="Search">
+  <input type="text" placeholder="What do you want to listen to?" />
+  <section class="search">
+    <CategoryCard
+      isNew={isNewCategory}
+      header="Podcasts"
+      backgroundColor="#556B2F"
+      imageSrc="../piano.png"
+    />
+    <CategoryCard
+      header="For You"
+      backgroundColor="#ffb6c1"
+      imageSrc="../dreamer.png"
+    />
+    <CategoryCard
+      isNew={isNewCategory}
+      header="Charts"
+      backgroundColor="#BDB76B"
+      imageSrc="../deep.png"
+    />
+    <CategoryCard
+      header="Releases"
+      backgroundColor="#FF69B4"
+      imageSrc="../caviar.png"
+    />
+    <CategoryCard
+      isNew={isNewCategory}
+      header="Discover"
+      backgroundColor="#4169E1"
+      imageSrc="../chill.png"
+    />
+    <CategoryCard
+      isNew={isNewCategory}
+      header="Events"
+      backgroundColor="#FFA500"
+      imageSrc="../rock.png"
+    />
+    <CategoryCard
+      isNew={isNewCategory}
+      header="Pop"
+      backgroundColor="#2E8B57 "
+      imageSrc="../flow.png"
+    />
+    <CategoryCard
+      header="Summer"
+      backgroundColor="#FF4500  "
+      imageSrc="../jazz.png"
+    />
+    <CategoryCard
+      isNew={isNewCategory}
+      header="Party"
+      backgroundColor="#8A2BE2  "
+      imageSrc="../sleep.png"
+    />
+    <CategoryCard
+      header="Ground"
+      backgroundColor="#8B008B  "
+      imageSrc="../top.png"
+    />
+  </section>
+</MainLayout>
+
+<style>
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 250px;
+  }
+
+  .search {
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+  }
+  input[type="text"] {
+    padding: 10px;
+    border: solid;
+    border-color: white;
+    background-color: var(--surface-color);
+    border-radius: 80px;
+    width: 300px;
+    font-size: 16px;
+    z-index: 3;
+    margin-left: 300px;
+    margin-top: -5px;
+    position: fixed;
+  }
+  input {
+    color: var(--text-primary);
+  }
+
+  input::placeholder {
+    color: var(--text-primary);
+    font-size: 0.8rem;
+  }
+  input:focus {
+    outline: none;
+  }
+</style>

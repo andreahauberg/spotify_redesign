@@ -1,5 +1,6 @@
 ---
 import Button from "./Button.astro";
+const { hasSearch } = Astro.props;
 ---
 
 <header class="top">
@@ -23,6 +24,13 @@ import Button from "./Button.astro";
       </button>
     </li>
   </menu>
+  {
+    hasSearch && (
+      <div class="search">
+        <input type="text" placeholder="Search for music..." />
+      </div>
+    )
+  }
   <div class="button_combo">
     <Button variant="secondary" size="large">Sign Up</Button>
     <Button variant="primary" size="large">Login</Button>
@@ -31,6 +39,7 @@ import Button from "./Button.astro";
 
 <style>
   .top {
+    z-index: 3;
     display: flex;
     position: fixed;
     width: 100%;
@@ -51,5 +60,15 @@ import Button from "./Button.astro";
     border-style: none;
     color: var(--text-secondary);
     margin-left:;
+  }
+  .search {
+    margin-bottom: 10px;
+  }
+
+  .search input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
   }
 </style>

@@ -1,0 +1,38 @@
+---
+import Badge from "../components/Badge.astro";
+const { header, isNew, imageSrc, backgroundColor } = Astro.props;
+const cardStyle = {
+  background: backgroundColor,
+};
+---
+
+<div class="category-card" style={cardStyle}>
+  <Badge isNew={isNew} />
+  <h1>{header}</h1>
+  <img src={imageSrc} alt="Card Image" class="card-image" />
+</div>
+<style>
+  .category-card {
+    border-radius: 8px;
+    padding: 16px;
+    width: 200px;
+    height: 200px;
+    margin-left: 1em;
+    margin-bottom: 1em;
+    margin: 0.8rem;
+  }
+
+  .category-card h1 {
+    font-size: 2rem;
+    margin: 8px 0;
+    color: var(--text-primary);
+  }
+
+  .card-image {
+    position: relative;
+    right: -80px;
+    bottom: -10px;
+    transform: rotate(26deg);
+    max-width: 50%;
+  }
+</style>
